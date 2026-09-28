@@ -102,7 +102,7 @@ LRESULT CALLBACK WindowProcedure(HWND janela, UINT mensagem, WPARAM wParam, LPAR
 			campoCodigo = CreateWindow("Edit", "", WS_VISIBLE | WS_CHILD | WS_BORDER |ES_NUMBER,140,70,220,25, janela, (HMENU)ID_CODIGO,NULL,NULL);
 			/*NOME*/
 			CreateWindow("STATIC","Nome:",WS_VISIBLE | WS_CHILD, 30,110,100,25, janela, NULL,NULL,NULL);
-			campoNome = CreateWindow("EDIT", "",WS_VISIBLE | WS_CHILD | WS_BORDER | ES_NUMBER, 140,150,220,25, janela, (HMENU) ID_NOME,NULL,NULL);
+			campoNome = CreateWindow("EDIT", "",WS_VISIBLE | WS_CHILD | WS_BORDER , 140,110,220,25, janela, (HMENU) ID_NOME,NULL,NULL);
 			/*QUANTIDADE*/
 			CreateWindow("STATIC", "Quantidade:", WS_VISIBLE | WS_CHILD, 30,150,100,25, janela, NULL, NULL,NULL);
 			campoQuantidade = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_NUMBER, 140,150,220,25, janela, (HMENU)ID_QUANTIDADE,NULL,NULL);
@@ -136,7 +136,7 @@ LRESULT CALLBACK WindowProcedure(HWND janela, UINT mensagem, WPARAM wParam, LPAR
 				case WM_DESTROY:
 					PostQuitMessage(0);
 					break;
-					defaut:
+					default:
 						return DefWindowProc(janela,mensagem, wParam,IParam);
 	}
 	return 0;
