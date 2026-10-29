@@ -136,7 +136,7 @@ void LimparCampos(){
     SendMessageA(campoLista, LB_RESETCONTENT, 0,0);
 }
 //Funcao principal da janela
-LRESULT CALLBACK janela(HWND hwnd, UINT msg,WPARAM wParam, LPARAM IPARAM) {
+LRESULT CALLBACK janela(HWND hwnd, UINT msg,WPARAM wParam, LPARAM lParam) {
     switch (msg) {
         case WM_CREATE:
             CreateWindowA("STATIC", "Produto:", WS_VISIBLE |WS_CHILD, 20,20,100,25,hwnd,NULL,NULL,NULL);
