@@ -64,7 +64,7 @@ void salvarCompra() {
     double preco,total;
     GetWindowTextA(campoProduto,produto,sizeof(produto));
     if(strlen(produto)== 0 || strchr(produto, ';') != NULL || strchr(produto, '\n')!=NULL || strchr(produto, '\r') !=NULL) {
-        MessageBoxA(NULL,"Informe um produto válido, sem ponto e virgula.", "Erro", MB_OK | MB_ICONERROR);
+        MessageBoxA(NULL,"Informe um produto valido, sem ponto e virgula.", "Erro", MB_OK | MB_ICONERROR);
     return;
     }
     if(!lerQuantidade(&quantidade)){
