@@ -72,7 +72,7 @@ void salvarCompra() {
         return;
     }
     if(!lerDecimal(campoPreco, &preco)|| preco <0){
-        MessageBoxA(NULL, "Digite um preco válido!","Erro", MB_OK |MB_ICONERROR);
+        MessageBoxA(NULL, "Digite um preco valido!","Erro", MB_OK |MB_ICONERROR);
         return;
     }
     total = quantidade * preco;
